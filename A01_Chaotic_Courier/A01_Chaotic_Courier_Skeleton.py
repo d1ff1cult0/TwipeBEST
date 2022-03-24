@@ -7,10 +7,12 @@ Write a function which receives a list and returns the list reversed.
 lst = eval(input())
 ### END INPUT
 
-
 def reverser(lst):
-    # TODO
-    pass
+    new_list = []
+    for i in range(len(lst)-1, -1, -1):
+        new_list.append(lst[i])
+    return new_list
+
 
 ### OUTPUT - DO NOT TOUCH
 print(reverser(lst))

@@ -10,8 +10,9 @@ lst = eval(input())
 
 
 def maxDifference(lst):
-    # TODO
-    pass
+    if max(lst[1])-lst[0] < 0:
+        return None
+    return max(lst[1])-lst[0]
 
 ### OUTPUT - DO NOT TOUCH
 print(maxDifference(lst))

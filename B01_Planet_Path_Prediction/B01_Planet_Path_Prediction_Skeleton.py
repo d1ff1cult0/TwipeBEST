@@ -7,15 +7,25 @@ this range.
 
 ### INPUT - DO NOT TOUCH
 eq1, eq2, rnge = eval(input())
+
+
 ### END INPUT
 
 
 def linear_intersection(eq1: tuple[int], eq2: tuple[int], rnge: tuple[int]) -> bool:
-    # TODO
-    pass
+    if eq1[0] == eq2[0]:
+        return False
+
+    if eq2[0] - eq1[0] != 0:
+        x = (eq2[1] - eq1[1]) / (eq2[0] - eq1[0])
+        if x and rnge[0] < x < rnge[1]:
+            return True
+
+    return False
+
 
 ### OUTPUT - DO NOT TOUCH
-print(linear_intersection(eq1, eq2))
+print(linear_intersection(eq1, eq2, rnge))
 ### END OUTPUT
 
 
@@ -23,4 +33,4 @@ print(linear_intersection(eq1, eq2))
 ### ((3, -4), (-1, -5), (-4, 2))
 
 ### EXAMPLE OUTPUT - YOU MAY UNCOMMENT THIS LINE TO CHECK THE EXAMPLE INPUT
-### assert linear_intersection(eq1, eq2, rnge) == True
+###assert linear_intersection(eq1, eq2, rnge) == True

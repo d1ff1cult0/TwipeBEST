@@ -8,13 +8,15 @@ if n = 12 and refNumber = 10 the output should be 4.
 """
 
 ### INPUT - DO NOT TOUCH
-n, refNumber = eval(input())
+refNumber, n = eval(input())
 ### END INPUT
 
 
 def surround(n,refNumber):
-    # TODO
-    pass
+    if refNumber <= n/2:
+        return refNumber+n/2
+    else:
+        return refNumber-n/2
 
 ### OUTPUT - DO NOT TOUCH
 print(surround(n,refNumber))
@@ -22,8 +24,8 @@ print(surround(n,refNumber))
 
 
 ### EXAMPLE INPUT - YOU MAY COPY THIS INTO THE TERMINAL TO TEST YOUR CODE
-### 10
-### 2
+###10
+###2
 
 ### EXAMPLE OUTPUT - YOU MAY UNCOMMENT THIS LINE TO CHECK THE EXAMPLE INPUT
-### assert surround(n,refNumber) == 7
+###assert surround(n,refNumber) == 7
