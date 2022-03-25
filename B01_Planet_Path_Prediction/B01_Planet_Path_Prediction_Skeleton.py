@@ -12,13 +12,15 @@ eq1, eq2, rnge = eval(input())
 ### END INPUT
 
 
-def linear_intersection(eq1: tuple[int], eq2: tuple[int], rnge: tuple[int]) -> bool:
-    if eq1[0] == eq2[0]:
+def linear_intersection(eq1, eq2, rnge):
+    if eq1[0] == eq2[0] and eq1[1] == eq2[1]:
+        return True
+    elif eq1[0] == eq2[0]:
         return False
 
     if eq2[0] - eq1[0] != 0:
-        x = (eq2[1] - eq1[1]) / (eq2[0] - eq1[0])
-        if x and rnge[0] < x < rnge[1]:
+        x = (eq2[1] - eq1[1]) / (eq1[0] - eq2[0])
+        if x and rnge[0] <= x <= rnge[1]:
             return True
 
     return False

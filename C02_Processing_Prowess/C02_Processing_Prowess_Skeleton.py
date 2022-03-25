@@ -11,8 +11,15 @@ n = int(input())
 ### END INPUT
 
 def bit_reverser(n):
-    # TODO
-    pass
+    binary = bin(n)[2:]
+    binary = reversed(binary)
+    new_binary = ""
+    for i in binary:
+        if i == '0':
+            new_binary += '1'
+        else:
+            new_binary += '0'
+    return int(new_binary, 2)
 
 ### OUTPUT - DO NOT TOUCH
 print(bit_reverser(n))

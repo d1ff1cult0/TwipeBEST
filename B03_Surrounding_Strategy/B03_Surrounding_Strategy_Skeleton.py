@@ -8,15 +8,15 @@ if n = 12 and refNumber = 10 the output should be 4.
 """
 
 ### INPUT - DO NOT TOUCH
-refNumber, n = eval(input())
+n, refNumber = eval(input())
 ### END INPUT
 
 
 def surround(n,refNumber):
     if refNumber <= n/2:
-        return refNumber+n/2
+        return int(refNumber+n/2)
     else:
-        return refNumber-n/2
+        return int(refNumber-n/2)
 
 ### OUTPUT - DO NOT TOUCH
 print(surround(n,refNumber))

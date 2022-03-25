@@ -4,12 +4,21 @@ You are given a string and it is you job to decrypt it. That's all you got, you 
 """
 
 ### INPUT - DO NOT TOUCH
-original = str(input())
+original = eval(input())
 ### END INPUT
 
 def encrypt(original):
-    # TODO
-    pass
+    alphabet = list('ABCDEFGHIJKLMNOPQRSTUVWXYZ')
+    decrypt = ''
+    for i in original:
+        if i == ' ':
+            decrypt += ' '
+        elif alphabet.index(i)+9 >= len(alphabet):
+            decrypt += alphabet[alphabet.index(i) + 9-len(alphabet)]
+        else:
+            decrypt += alphabet[alphabet.index(i) + 9]
+
+    return decrypt
 
 ### OUTPUT - DO NOT TOUCH
 print(encrypt(original))
